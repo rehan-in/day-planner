@@ -1,58 +1,44 @@
-# 📅 DayPlanner — Full-Stack Productivity & Reflection Platform
+# DayPlanner
 
-A modern, feature-packed full-stack MERN (MongoDB, Express, React, Node.js) web application designed to help users structure their daily tasks, track time, build habits, reflect on daily progress, and visualize long-term productivity trends.
-
----
-
-## 🌟 Short GitHub Description
-
-> **DayPlanner** is a feature-packed full-stack MERN application for daily goal tracking, task time management, Pomodoro focus sessions, end-of-day reflections, and visual analytics with Dark Mode & CSV/PDF export.
+DayPlanner is a full-stack MERN (MongoDB, Express, React, Node.js) web application designed to help users plan daily goals, manage task time, conduct end-of-day reflections, and track long-term productivity trends.
 
 ---
 
-## ✨ Features
+## Project Overview
 
-- **🔐 Authentication & Security**: Secure user registration, JWT authentication, bcrypt password hashing, password reset flow, and Express rate-limiting.
-- **📋 Day Planner & Task Management**:
-  - Organize topics with custom categories (*Work, Study, Personal, Fitness, General, Other*) and priority levels (*High, Medium, Low*).
-  - Estimated vs. Actual time tracking per task.
-  - Quick 1-click routine/habit templates (*Workout, Reading, Meditation, Code Review*).
-- **⏱️ Integrated Pomodoro Focus Timer**: Built-in 25m Focus / 5m Short Break / 15m Long Break timer with sound alerts, progress indicators, and task pre-loading.
-- **📝 Daily Reflection Summary**: Reflect on wins, key lessons, achievements, mistakes, distractions, tomorrow's goals, mood tracker, and daily 1-10 rating.
-- **📊 Visual Analytics**: Interactive **Recharts** graphs visualizing 7-day completion rate trends and mood distribution.
-- **📄 History & Exporting**: Searchable reflection timeline with **Export to CSV** and formatted **Print/Save as PDF**.
-- **🌓 Dark / Light Theme Toggle**: Persistent theme switcher with custom dark mode glassmorphism UI.
-- **🔄 Resilient Database Connection**: Automatic failover between remote MongoDB Atlas and local MongoDB instances.
+DayPlanner provides an intuitive dashboard for daily task planning, habit formation, and personal growth reflection. Key capabilities include:
 
----
-
-## 🛠️ Tech Stack
-
-### Frontend
-- **Framework**: React 19 + Vite
-- **UI Components**: Material UI (MUI) v6
-- **Styling**: Tailwind CSS v4 + Custom CSS
-- **Charts & Data Viz**: Recharts
-- **State & Routing**: React Context API + React Router v7
-- **Notifications**: React Hot Toast
-
-### Backend
-- **Runtime & Framework**: Node.js + Express.js v5
-- **Database & ORM**: MongoDB + Mongoose v9
-- **Security & Auth**: JSON Web Tokens (JWT), BcryptJS, Helmet, Express-Rate-Limit
-- **Email Service**: Nodemailer
+- **Task Planning & Category Tracking**: Organize tasks into categories (*Work, Study, Personal, Fitness, General, Other*) with priority levels and estimated vs. actual time tracking.
+- **Focus Pomodoro Timer**: Built-in 25-minute focus session timer with short/long break presets and sound notifications.
+- **Habit Templates**: One-click quick-add routines for common habits (Workout, Reading, Meditation, Code Review).
+- **Daily Reflection & Summary**: End-of-day review questionnaire tracking achievements, key learnings, setbacks, mood, and daily ratings.
+- **Visual Analytics**: Interactive charts visualizing weekly completion rates, task distributions, and mood trends using Recharts.
+- **Data Export & History**: Searchable history logs with one-click CSV export and print-to-PDF formatting.
+- **Dark / Light Theme**: Built-in dark mode support with automatic user preference persistence.
+- **Secure Authentication**: JWT-based authentication, password hashing, and rate-limiting on authentication endpoints.
 
 ---
 
-## 🚀 Getting Started
+## Technology Stack
+
+| Layer | Technologies Used |
+|---|---|
+| **Frontend** | React 19, Vite, Tailwind CSS v4, Material UI (MUI), Recharts, React Router v7 |
+| **Backend** | Node.js, Express.js, Mongoose, JWT, BcryptJS, Express-Rate-Limit, Helmet |
+| **Database** | MongoDB (Atlas or Local MongoDB instance) |
+
+---
+
+## Getting Started
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) (v18+ recommended)
-- [MongoDB](https://www.mongodb.com/) (Local service or MongoDB Atlas cluster)
+
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- [MongoDB](https://www.mongodb.com/) (Local service or cloud cluster)
 
 ### Installation
 
-1. **Clone the Repository**:
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/your-username/day-planner.git
    cd day-planner
@@ -63,12 +49,12 @@ A modern, feature-packed full-stack MERN (MongoDB, Express, React, Node.js) web 
    cd backend
    npm install
    ```
-   Create a `.env` file inside `backend/`:
+   Create a `.env` file in the `backend/` directory:
    ```env
    PORT=5000
-   MONGODB_URI=mongodb://127.0.0.1:27017/dayplanner
+   MONGODB_URI=your_mongodb_connection_string
    LOCAL_MONGO_URI=mongodb://127.0.0.1:27017/dayplanner
-   JWT_SECRET=your_super_secret_jwt_key
+   JWT_SECRET=your_jwt_secret_key
    JWT_EXPIRE=7d
    FRONTEND_URL=http://localhost:3500
    ```
@@ -78,55 +64,25 @@ A modern, feature-packed full-stack MERN (MongoDB, Express, React, Node.js) web 
    cd ../frontend
    npm install
    ```
-   Create a `.env` file inside `frontend/`:
+   Create a `.env` file in the `frontend/` directory:
    ```env
    VITE_API_URL=http://localhost:5000/api
    ```
 
----
+### Running the Project
 
-## 🏃 Running the Application
-
-1. **Start Backend Server**:
+1. **Start the backend server**:
    ```bash
    cd backend
    npm run server
    ```
-   The backend API will run on `http://localhost:5000`.
 
-2. **Start Frontend App**:
+2. **Start the frontend application**:
    ```bash
    cd frontend
    npm run dev
    ```
-   The frontend application will run on `http://localhost:3500`.
+
+3. Open `http://localhost:3500` in your web browser.
 
 ---
-
-## 🧪 Testing
-
-- **Backend End-to-End API Test**:
-  ```bash
-  cd backend
-  node ../scratch/test_flow.js
-  ```
-
-- **Frontend Production Build**:
-  ```bash
-  cd frontend
-  npm run build
-  ```
-
----
-
-## 🔑 Demo Account
-
-For quick testing, you can use the pre-seeded demo credentials:
-- **Email**: `demo@example.com`
-- **Password**: `Password123!`
-
----
-
-## 📄 License
-
-This project is open source and available under the [ISC License](LICENSE).
