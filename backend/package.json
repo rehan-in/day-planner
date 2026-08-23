@@ -1,0 +1,28 @@
+{
+  "name": "dayPlanner",
+  "version": "1.0.0",
+  "description": "This is a dayPlanner MERN stack application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Mohammad Rehan",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.6.2",
+    "express-validator": "^7.3.2",
+    "helmet": "^8.2.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb": "^7.4.0",
+    "mongoose": "^9.7.4",
+    "nodemailer": "^9.0.3",
+    "nodemon": "^3.1.14"
+  }
+}

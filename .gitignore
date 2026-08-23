@@ -1,0 +1,12 @@
+# Environment files
+frontend/.env
+backend/.env
+
+# Private text file
+backend/config.txt
+
+# Dependencies
+frontend/node_modules/
+backend/node_modules/
+
+notes.txt
